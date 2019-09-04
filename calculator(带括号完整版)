@@ -1,0 +1,106 @@
+// 手撕带括号的四则运算，记住57行一定要用while
+#include<stack>
+#include<unordered_map>
+#include<iostream>
+#include<string>
+#include<sstream>  
+using namespace std;
+class Solution {
+public:
+	unordered_map<char, int> M = {
+		{'+', 0}, 
+		{'-', 0},
+		{'*', 1},
+		{'/', 1}
+	};
+    float helper(float a, float b, char c)
+    {
+        if (c == '+')
+        {
+            return a+b;
+        }
+        else if (c == '-') 
+        {
+            return a-b;
+        }
+        else if (c == '*')
+        {
+			return a*b; 
+		}
+		else if (c == '/')
+		{
+			return a/b;
+		}
+    }
+    void helper2(stack<char>& S1, stack<float>& S2)
+    {
+        char tmp1 = S1.top();
+        S1.pop();
+        float a = S2.top();
+        S2.pop();
+        float b = S2.top();
+        S2.pop();
+        float res1 = helper(b, a, tmp1);
+        S2.push(res1);
+    }
+    
+    float calculate(string s) {
+        stack<char> S1;
+        stack<float> S2;
+        int len = s.length();
+        for (int i = 0; i < len; i++)
+        {
+            char cur = s[i];
+            if (cur == ' ') continue;
+            if (cur == '(' || cur == '+' || cur == '-' || cur == '*' || cur == '/')
+            {
+                if (cur != '(')
+                while (!S1.empty() && S1.top() != '(' && M[S1.top()] >= M[cur]) 
+                {
+                    helper2(S1, S2);
+                }         
+                S1.push(cur);
+            }
+            else if (cur == ')')
+            {
+                while (S1.top() != '(')
+                {
+                    helper2(S1, S2);     
+                }
+                S1.pop();
+            }
+            else
+            {
+                string numstr = "";
+                while (s[i] <= '9' && s[i] >= '0')
+                {
+                    numstr += s[i];
+                    i++;
+                }
+                i -= 1;
+                istringstream in(numstr);
+                float sum;
+                in >> sum;
+                S2.push(sum);                
+            }
+        }
+        
+        while (!S1.empty())
+        {
+            helper2(S1, S2);
+        }
+        float ans = S2.top();
+        S2.pop();
+        return ans;
+    }
+};
+
+int main()
+{
+	string s;
+	while (cin >> s)
+	{
+		Solution* s1 = new Solution();	
+		cout << s1->calculate(s) << endl;
+	}
+}
