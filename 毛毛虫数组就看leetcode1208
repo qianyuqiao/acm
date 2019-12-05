@@ -1,1 +1,25 @@
 https://leetcode.com/problems/get-equal-substrings-within-budget/
+class Solution {
+public:
+    int equalSubstring(string s, string t, int maxCost) {
+        int len = s.length();
+        vector<int> nums(len, 0);
+        for (int i = 0; i < len; i++) 
+        {
+            if (s[i] >= t[i]) nums[i] = s[i] - t[i];
+            else nums[i] = t[i] - s[i];
+        }
+        
+        int i = 0; 
+        int j = 0;
+        int sum = 0;
+        int count = 0;
+        for (; i < len; i++)
+        {
+            sum += nums[i]; // 探头
+            for (; sum > maxCost && j <= i; sum -= nums[j++]); // 缩尾巴
+            count = max(count, i+1-j);
+        }
+        return count;
+    }
+};
