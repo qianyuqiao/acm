@@ -12,10 +12,8 @@
 ```
 for (int k = 0; k < N; K++)
     for (int i = 0; i < n; i++)
-        for (int j = 0; j < n; j++)
-    {
-        dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);
-    }
+        for (int j = 0; j < n; j++) {
+            dp[i][j] = min(dp[i][j], dp[i][k] + dp[k][j]);}
 ```
 
 # 其中一种证明思路如下:
