@@ -1,10 +1,8 @@
 连续子序列的最大和。
 缘起：设dp[i]为以nums[i]结尾的连续子序列的最大和，则
 ```
-dp[i] = 
-    dp[i-1] + nums[i]; (dp[i-1] > 0)
-    
-    nums[i];
+if (dp[i-1] > 0) dp[i-1] + nums[i]; 
+else dp[i] = nums[i];
 ```
 代码
 ```
