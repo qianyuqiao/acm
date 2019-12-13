@@ -1,4 +1,5 @@
-// nums.size() >= 1;获取连续子序列的最大和
+连续子序列的最大和。
+```
 int getMaxSumSubArray(vector<int>& nums)
 {
     int sum = nums[0];
@@ -11,7 +12,7 @@ int getMaxSumSubArray(vector<int>& nums)
     }
     return res;
 }
-
+```
 //关于连续子序列的最小和，可以这样想，如果一个数组的所有连续子序列和的范围为(a, b)这一段，那么他的相反数数组构成的连续子序列的和必定为(-b, -a)
 //所以，相反数数组的最大值的相反数即为最小和
 int getMinSumSubArray(vector<int>& nums)
