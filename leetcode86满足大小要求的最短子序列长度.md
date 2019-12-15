@@ -5,3 +5,20 @@
 **1.如果我们能对于每个前缀和，按照索引顺序维持一个他前面的前缀和的递增数组，那么可以从从递增数组的头部开始遍历直到找到最近的一个满足要求的前缀和S[j1]**
 
 **2.当找到一个符合要求的位置后，对于后面的前缀和S[k](k > i)，S[k]需要的满足要求的S[j2]一定在j1后面的数（不包括j1）形成的递增数组里面**
+代码
+```
+int res = INT_MAX;
+deque<int> Q;
+for (int i = 0; i < Slen; i++)
+{
+    if (S[i] >= K) res = min(res, S[i]);
+    while (!Q.empty() && S[Q.front()] + K <= S[i])
+    {
+        res = min(res, i-Q.front());
+        Q.pop_front();
+    }
+    while (!Q.empty() && S[Q.back()] >= S[i]) S.pop_back();
+    Q.push_back(i);
+}
+return res;
+```
