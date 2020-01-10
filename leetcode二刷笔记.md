@@ -27,11 +27,13 @@ A[i-1] <= B[j] && B[j-1] <= A[i]<br>
 ### 9. Palindrome Number
 简单题
 ### 10. Regular Expression Matching
-好题，当p[j-1] == '*'时候，
+好题，难点在于匹配到"\*"号的时候
 ```
 else if (p[j-1] == '*') 
 {
     dp[i][j] = dp[i][j-2] || dp[i][j-1];//任何人都能匹配0次或1次
-    if (p[j-2] == '.' || p[j-2] == s[i-1]) dp[i][j] = dp[i][j] || dp[i-1][j]; // 匹配星号
+    if (p[j-2] == '.' || p[j-2] == s[i-1]) dp[i][j] = dp[i][j] || dp[i-1][j]; // 匹配多次
 }
 ```
+### 11. Container With Most Water
+移动短板才可能使面积变大，所以每次向中心移动短板吧
