@@ -3,4 +3,7 @@
 递归的话只要7行。
 ### 3. Longest Substring Without Repeating Characters
 二刷的时候一看就知道是滑动窗口，注意字符串可能为空
-正常的
+### 4. Median of Two Sorted Arrays
+两种思路，1.摁葫芦法，<br>
+要找第k个数(k从1开始数)，如果A[i] > B[j]且i+1+j+1 = k那么边界一定在索引j的后面，通过不断试探来确定边界
+![这里随便写文字](https://github.com/qianyuqiao/scripts/blob/master/median.jpg)
