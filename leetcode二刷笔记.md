@@ -19,6 +19,6 @@ A[i-1] <= B[j] && B[j-1] <= A[i]<br>
 用dp做的话，简单;<br>
 用镜面扩展的话，也简单
 ### 6	ZigZag Conversion
-弱智题不解释，注意numRows=1的特殊情况
+简单题不解释，注意numRows=1的特殊情况
 7. Reverse Integer
 注意临界条件，用long long int表示x
