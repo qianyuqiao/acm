@@ -20,5 +20,18 @@ A[i-1] <= B[j] && B[j-1] <= A[i]<br>
 用镜面扩展的话，也简单
 ### 6	ZigZag Conversion
 简单题不解释，注意numRows=1的特殊情况
-7. Reverse Integer
+### 7. Reverse Integer
 注意临界条件，用long long int表示x
+### 8.String to Integer (atoi)（恶心）
+纯粹恶心人的，不做也罢
+### 9. Palindrome Number
+简单题
+### 10. Regular Expression Matching
+好题，当p[j-1] == '*'时候，
+```
+else if (p[j-1] == '*') 
+{
+    dp[i][j] = dp[i][j-2] || dp[i][j-1];//任何人都能匹配0次或1次
+    if (p[j-2] == '.' || p[j-2] == s[i-1]) dp[i][j] = dp[i][j] || dp[i-1][j]; // 匹配星号
+}
+```
