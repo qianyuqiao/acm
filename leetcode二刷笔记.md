@@ -18,3 +18,5 @@ A[i-1] <= B[j] && B[j-1] <= A[i]<br>
 ### 5. Longest Palindromic Substring
 用dp做的话，简单;<br>
 用镜面扩展的话，也简单
+### 6	ZigZag Conversion
+弱智题不解释，注意numRows=1的特殊情况
