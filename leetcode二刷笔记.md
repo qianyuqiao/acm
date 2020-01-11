@@ -49,3 +49,5 @@ else if (p[j-1] == '*')
 2.内层循环分为nums[i] 和 nums[j]相等不等的两种情况，对于相等，直接放入res然后退出；对于不等，循环去重
 ### 16. 3Sum Closest
 和上一题思路一致，不同的是在内层循环加了一个判断记录当前距离是否比已有的最小距离小
+### 17. Letter Combinations of a Phone Number
+简单题，迭代就行了
