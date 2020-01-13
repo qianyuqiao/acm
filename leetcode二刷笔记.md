@@ -59,3 +59,5 @@ else if (p[j-1] == '*')
 易错，注意判断栈是否非空，非空才能S.pop()
 ### 21. Merge Two Sorted Lists
 好题，建议三刷，利用递归可以不new
+### 22. Generate Parentheses
+简单题，dfs6行解决，Runtime: 0 ms, faster than 100.00% of C++ online submissions for Generate Parentheses.
