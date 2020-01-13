@@ -57,3 +57,5 @@ else if (p[j-1] == '*')
 快慢指针法
 ### 20. Valid Parentheses
 易错，注意判断栈是否非空，非空才能S.pop()
+### 21. Merge Two Sorted Lists
+好题，建议三刷，利用递归可以不new
