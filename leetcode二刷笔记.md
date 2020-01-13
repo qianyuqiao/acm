@@ -53,3 +53,7 @@ else if (p[j-1] == '*')
 简单题，迭代就行了
 ### 18. 4Sum
 和15题思路一模一样，但是这次两个外层循环都需要在内层循环完成的最后循环去重
+### 19. Remove Nth Node From End of List
+快慢指针法
+### 20. Valid Parentheses
+易错，注意判断栈是否非空，非空才能S.pop()
