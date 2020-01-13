@@ -63,3 +63,5 @@ else if (p[j-1] == '*')
 简单题，dfs6行解决，Runtime: 0 ms, faster than 100.00% of C++ online submissions for Generate Parentheses.
 ### 23. Merge k Sorted Lists
 基于21题，归并排序即可。
+### 24. Swap Nodes in Pairs
+简单题，可以用迭代也可以用递归
