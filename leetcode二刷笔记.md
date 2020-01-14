@@ -67,3 +67,12 @@ else if (p[j-1] == '*')
 简单题，可以用迭代也可以用递归
 ### 25. Reverse Nodes in k-Group
 好题，可以用递归写法，难点是每次递归要把下一组的第一个节点找出来
+### 26. Remove Duplicates from Sorted Array
+好题，三行解决，
+```
+    int removeDuplicates(vector<int>& nums) {
+        int count = 0, n = nums.size();
+        for (int i = 1; i < n; i++) nums[i] == nums[i-1] ? count++ : nums[i-count] = nums[i];
+        return n - count;
+    }
+```
