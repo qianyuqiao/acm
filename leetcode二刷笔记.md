@@ -99,6 +99,7 @@ for (int i = 0; i < len; i++)
         if (m.find(tmp) != m.end())
         {
             m[tmp]--;
+            if (m[tmp] < 0) break;
         }
         else break;
     }
