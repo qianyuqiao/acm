@@ -78,3 +78,6 @@ else if (p[j-1] == '*')
 ```
 ### 27. Remove Element
 和上一题思路一模一样
+### 28. Implement strStr()
+模板要背熟
+
