@@ -85,3 +85,24 @@ else if (p[j-1] == '*')
 1.边界条件的处理，将a = INT_MIN,b=-1单独拿出来处理<br>
 2. 1 << 31 == INT_MIN(常数默认类型是INT)<br>
 (long long)1 << 31 == INT_MAX + 1;
+### 30.Substring with Concatenation of All Words
+这题还是一格格的往后试吧。。
+```
+....
+for (int i = 0; i < len; i++)
+{
+    unordered_map<string, int> m = m0;
+    int j = 0;
+    for (j = 0; j < wlen; j++)
+    {
+        string tmp = s.substr(i+j*wlen, wsize);
+        if (m.find(tmp) != m.end())
+        {
+            m[tmp]--;
+        }
+        else break;
+    }
+    if (j == wlen) res.push_back(i);
+}
+return res;
+```
