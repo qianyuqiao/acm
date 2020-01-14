@@ -65,3 +65,5 @@ else if (p[j-1] == '*')
 基于21题，归并排序即可。
 ### 24. Swap Nodes in Pairs
 简单题，可以用迭代也可以用递归
+### 25. Reverse Nodes in k-Group
+好题，可以用递归写法，难点是每次递归要把下一组的第一个节点找出来
