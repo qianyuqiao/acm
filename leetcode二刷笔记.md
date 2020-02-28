@@ -107,3 +107,13 @@ for (int i = 0; i < len; i++)
 }
 return res;
 ```
+### 31.next permutation
+好题建议三刷，算法可以概括为：最后的守序者<br>
+与大于守序者的最后者互换，守序者后反转
+即
+```
+1.找到所有满足nums[k]<nums[k+1]的情形中，使k最大的那个
+2.再找到所有满足nums[l]>nums[k]中,使l最大的那个
+3.交换nums[k],nums[l]
+4.对nums[k]之后的元素(不包括nums[k])进行反转，即可得到结果
+```
