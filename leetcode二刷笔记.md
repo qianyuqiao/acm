@@ -79,7 +79,7 @@ else if (p[j-1] == '*')
 ### 27. Remove Element
 和上一题思路一模一样
 ### 28. Implement strStr()
-模板要背熟
+好题，模板要背熟
 ### 29. Divide Two Integers
 好题，这题的坑点有如下：<br>
 1.边界条件的处理，将a = INT_MIN,b=-1单独拿出来处理<br>
