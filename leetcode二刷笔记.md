@@ -138,3 +138,5 @@ return res;
 ```
 ### 38. Count and Say
 题目看懂了就不难了
+### 39. Combination Sum
+好题建议三刷，裸dfs题，用动态规划也能做
