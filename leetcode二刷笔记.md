@@ -32,7 +32,7 @@ A[i-1] <= B[j] && B[j-1] <= A[i]<br>
 else if (p[j-1] == '*') 
 {
     dp[i][j] = dp[i][j-2] || dp[i][j-1];//任何人都能匹配0次或1次
-    if (p[j-2] == '.' || p[j-2] == s[i-1]) dp[i][j] = dp[i][j] || dp[i-1][j]; // 匹配多次
+    if (p[j-2] == '.' || p[j-2] == s[i-1]) dp[i][j] = dp[i][j] || dp[i-1][j]; // 匹配多次,这里容易错，必须是dp[i-1][j],因为可能是aaa和.*
 }
 ```
 ### 11. Container With Most Water
