@@ -164,7 +164,7 @@ return res;
 ```
 三块板才能形成一个水池    
 ```
-### 43. Multiply Strings(不会的大坑题) 
+### 43. Multiply Strings(不会) 
 这题的坑在于
 ```
 int index1 = i + j + 1;
@@ -173,7 +173,7 @@ int sum = tmp1*tmp2 + res[index1] - '0';
 res[index0] += sum/10;// index0上可能有别的数据，比如65*35,65*5得到325,5*3得到15，5+2得到7,1要加到3上
 res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 ```
-### 44. Wildcard Matching（不会的）
+### 44. Wildcard Matching（不会）
 和第十题思路类似，不过比第十题思路简单
 ### 45. Jump Game II
 这题采用搜刮法，例如
@@ -184,3 +184,7 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 2轮搜刮后的增加的下标：3,4
 ```
 所以答案是2
+### 46. Permutations(建议换一种方法三刷)
+简单dfs
+### 47. Permutations II（易错）
+和3SUM,4SUM,conbinationsII一样，在第一个数字完成dfs后后移
