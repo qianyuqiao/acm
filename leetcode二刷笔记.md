@@ -130,4 +130,9 @@ return res;
 好题三刷，这题= 找到>=target的第一个数 + <= target的最后一个数
 ### 35. Search Insert Position
 找到>=target的第一个数的下标位置
-### 
+### 36. Valid Sudoku
+利用数组存储，遍历一次就够了<br>
+注意：
+```
+(i/3)\*3 != i
+```
