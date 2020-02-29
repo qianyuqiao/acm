@@ -128,3 +128,6 @@ return res;
 思路3.先用while (st < ed)找出最小元素，根据最小元素确定target在左边还是在右边。<br>
 ### 34. Find First and Last Position of Element in Sorted Array
 好题三刷，这题= 找到>=target的第一个数 + <= target的最后一个数
+### 35. Search Insert Position
+找到>=target的第一个数的下标位置
+### 
