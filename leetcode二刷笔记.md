@@ -122,6 +122,7 @@ return res;
 以这个右括号结尾的长度一定是右括号索引-左括号索引+1+（左括号前一位如果是右括号，右括号的长度）
 ### 33. Search in Rotated Sorted Array
 好题三刷，有三种思路：<br>
-思路1.先判断nums[mid]在左边还是右边，再判断target在nums[mid]左边还是右边
-思路2.如果target和nums[mid]不在同一边，判断nums[mid]在左边还是在右边，如果在nums[mid ]左边，nums[mid] = INT_MIN,在右边nums[mid] = INT_MAX;
-思路3.先用while (st < ed)找出最小元素，根据最小元素确定target在左边还是在右边。
+思路1.先判断nums[mid]在左边还是右边，再判断target在nums[mid]左边还是右边<br>
+思路2.如果target和nums[mid]不在同一边，判断nums[mid]在左边还是在右边，<br>
+如果在nums[mid ]左边，nums[mid] = INT_MIN,在右边nums[mid] = INT_MAX;<br>
+思路3.先用while (st < ed)找出最小元素，根据最小元素确定target在左边还是在右边。<br>
