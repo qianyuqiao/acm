@@ -188,3 +188,5 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 简单dfs
 ### 47. Permutations II（易错）
 和3SUM,4SUM,conbinationsII一样，在第一个数字完成dfs后后移
+### 48. Rotate Image
+两个难点
