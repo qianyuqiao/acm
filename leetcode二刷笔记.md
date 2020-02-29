@@ -164,7 +164,7 @@ return res;
 ```
 三块板才能形成一个水池    
 ```
-### 43. Multiply Strings(大坑题) 
+### 43. Multiply Strings(不会的大坑题) 
 这题的坑在于
 ```
 int index1 = i + j + 1;
