@@ -136,3 +136,5 @@ return res;
 ```
 (i/3)*3 != i
 ```
+### 38. Count and Say
+题目看懂了就不难了
