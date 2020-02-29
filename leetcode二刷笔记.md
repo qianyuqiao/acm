@@ -29,6 +29,7 @@ A[i-1] <= B[j] && B[j-1] <= A[i]<br>
 ### 10. Regular Expression Matching
 好题，难点在于匹配到"\*"号的时候
 ```
+容易错的地方在于多次匹配 必须是dp[i-1][j]
 else if (p[j-1] == '*') 
 {
     dp[i][j] = dp[i][j-2] || dp[i][j-1];//任何人都能匹配0次或1次
