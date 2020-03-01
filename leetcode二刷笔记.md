@@ -226,3 +226,6 @@ double Pow(double x, unsigned int n)
 注意卡丹算法的坑
 ### 58. Length of Last Word
 简单题，直接秒杀
+
+### 60. Permutation Sequence
+直接背公式
