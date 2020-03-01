@@ -222,3 +222,5 @@ double Pow(double x, unsigned int n)
 难点在于判断条件
 ### 52. N-QueensII
 和41题一样
+### 53.最大连续子序列（易错）
+注意卡丹算法的坑
