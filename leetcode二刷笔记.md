@@ -224,3 +224,5 @@ double Pow(double x, unsigned int n)
 和41题一样
 ### 53.最大连续子序列（易错）
 注意卡丹算法的坑
+### 58. Length of Last Word
+简单题，直接秒杀
