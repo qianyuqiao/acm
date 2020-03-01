@@ -198,3 +198,23 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 2.看图说四个点的坐标
 ### 49 Group Anagrams
 查找排序后的字符串有没有记录
+### 50. Pow(x, n)(不会)
+好题三刷
+1.对INT_MIN要单独处理
+```
+unsigned int nn;
+if (n == INT_MIN) nn = (unsigned int)INT_MAX + 1;
+else nn = (n >= 0 ? n : -n);
+```
+2.公式要背牢
+```
+double Pow(double x, unsigned int n)
+{
+    if (n == 0) return 1.0;
+    if (n == 1) return x;
+    double r = Pow(x, n>>1);
+    r *= r;
+    if (n & 0x01) r *= x;
+    return r;
+}
+```
