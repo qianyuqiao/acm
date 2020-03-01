@@ -218,3 +218,5 @@ double Pow(double x, unsigned int n)
     return r;
 }
 ```
+### 51. N-Queens(不会）
+难点在于判断条件
