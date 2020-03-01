@@ -185,10 +185,13 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 ```
 所以答案是2
 ### 46. Permutations(建议换一种方法三刷)
-简单dfs，如果要NextPermutation的算法，需要的次数是斐波拉切数
+建议用NextPermutation + do while
+用dfs也可以做
 ### 47. Permutations II（易错）
+建议用do while
 和3SUM,4SUM,conbinationsII一样，在第一个数字完成dfs后后移
 ### 48. Rotate Image
 两个难点，但是画张图就行了
 ![image](https://github.com/qianyuqiao/acm/blob/master/img/yuandixuanzhuan.jpg)
-1.
+1.j最大是len-1-i
+2.看图说四个点的坐标
