@@ -185,7 +185,7 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 ```
 所以答案是2
 ### 46. Permutations(建议换一种方法三刷)
-简单dfs
+简单dfs，如果要NextPermutation的算法，需要的次数是斐波拉切数
 ### 47. Permutations II（易错）
 和3SUM,4SUM,conbinationsII一样，在第一个数字完成dfs后后移
 ### 48. Rotate Image
