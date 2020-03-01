@@ -220,3 +220,5 @@ double Pow(double x, unsigned int n)
 ```
 ### 51. N-Queens(不会）
 难点在于判断条件
+### 52. N-QueensII
+和41题一样
