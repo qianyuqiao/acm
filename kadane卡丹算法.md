@@ -8,6 +8,7 @@ else dp[i] = nums[i];
 ```
 int getMaxSumSubArray(vector<int>& nums)
 {
+    if (nums.size() == 0) return 0;
     int sum = nums[0];
     int res = nums[0];
     for (int i = 1; i < nums.size(); i++)
