@@ -193,5 +193,6 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 ### 48. Rotate Image
 两个难点，但是画张图就行了
 ![image](https://github.com/qianyuqiao/acm/blob/master/img/yuandixuanzhuan.jpg)
+<br>
 1.j最大是len-1-i
 2.看图说四个点的坐标
