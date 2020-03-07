@@ -133,7 +133,7 @@ else if (p[j-1] == '*')
 ```
 ### 24. Swap Nodes in Pairs
 简单题，可以用迭代也可以用递归
-### 25. Reverse Nodes in k-Group
+### 25. Reverse Nodes in k-Group（建议4刷）
 好题，可以用递归写法，难点是每次递归要把下一组的第一个节点找出来
 ```
         ListNode* tail = head;
@@ -145,6 +145,33 @@ else if (p[j-1] == '*')
         ListNode* res = reverse(head, tail);//找到下次递归时使用的第一个节点。
         head->next = reverseKGroup(tail, k);
         return res;
+```
+迭代：
+```
+        if (k == 1 || head == NULL) return head;
+        ListNode* dummy = new ListNode();
+        ListNode* tail = dummy;
+        dummy->next = head;
+        ListNode* cur = head;
+        int i = 0;
+        while (cur)
+        {
+            i = 0;
+            while (i < k && cur) //难点1 
+            {
+                cur = cur->next;
+                i++;
+            }
+            if (i < k)  // 难点2
+            {
+                tail->next = head;
+                break;
+            }
+            tail->next = reverse(head, cur);
+            tail = head;
+            head = cur;
+        }
+        return dummy->next;
 ```
 ### 26. Remove Duplicates from Sorted Array
 好题，三行解决，
