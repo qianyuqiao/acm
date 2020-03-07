@@ -93,6 +93,44 @@ else if (p[j-1] == '*')
 简单题，dfs6行解决，Runtime: 0 ms, faster than 100.00% of C++ online submissions for Generate Parentheses.
 ### 23. Merge k Sorted Lists
 基于21题，归并排序即可。
+```
+    ListNode* merge(ListNode* l1, ListNode* l2)
+    {
+        ListNode* dummy = new ListNode();
+        ListNode* tail = dummy;
+        while (l1 && l2)
+        {
+            if (l1->val <= l2->val)
+            {
+                tail->next = l1;
+                l1 = l1->next;
+            }
+            else
+            {
+                tail->next = l2;
+                l2 = l2->next;
+            }
+            tail = tail->next;
+        }
+        tail->next = l1? l1: l2;
+        return dummy->next;
+    }
+    
+    ListNode* Merge(vector<ListNode*>& lists, int st, int ed)
+    {
+        if (st == ed) return lists[st];
+        if (ed == st + 1) return merge(lists[st], lists[ed]);
+        ListNode* p1 = Merge(lists, st, (st+ed)/2);
+        ListNode* p2 = Merge(lists, (st+ed)/2+1, ed);
+        return merge(p1, p2);
+    }
+    
+    ListNode* mergeKLists(vector<ListNode*>& lists) {
+        int len = lists.size();
+        if (len == 0) return NULL;
+        return Merge(lists, 0, len-1);
+    }
+```
 ### 24. Swap Nodes in Pairs
 简单题，可以用迭代也可以用递归
 ### 25. Reverse Nodes in k-Group
