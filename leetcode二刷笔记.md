@@ -135,6 +135,17 @@ else if (p[j-1] == '*')
 简单题，可以用迭代也可以用递归
 ### 25. Reverse Nodes in k-Group
 好题，可以用递归写法，难点是每次递归要把下一组的第一个节点找出来
+```
+        ListNode* tail = head;
+        for (int i = 0; i < k; i++)
+        {
+            if (!tail) return head;
+            tail = tail->next;
+        }
+        ListNode* res = reverse(head, tail);//找到下次递归时使用的第一个节点。
+        head->next = reverseKGroup(tail, k);
+        return res;
+```
 ### 26. Remove Duplicates from Sorted Array
 好题，三行解决，
 ```
