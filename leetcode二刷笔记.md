@@ -60,6 +60,35 @@ else if (p[j-1] == '*')
 易错，注意判断栈是否非空，非空才能S.pop()
 ### 21. Merge Two Sorted Lists
 好题，建议三刷，利用递归或迭代都可以不new
+```
+递归写法：
+        if (!l1 || l2 && l1->val > l2->val) swap(l1, l2);
+        if (l1) l1->next = mergeTwoLists(l1->next, l2);
+        return l1;
+迭代写法：
+    ListNode* mergeTwoLists(ListNode* l1, ListNode* l2) {
+        ListNode* dummy = new ListNode();
+        ListNode* tail = dummy;
+        while (l1 && l2)
+        {
+            if (l1->val <= l2->val)
+            {
+                tail->next = l1;
+                l1 = l1->next;
+            }
+            else 
+            {
+                tail->next = l2;
+                l2 = l2->next;
+            }
+            tail = tail->next;
+        }
+        tail->next = l1? l1: l2;
+        return dummy->next;
+    }
+```
+
+
 ### 22. Generate Parentheses
 简单题，dfs6行解决，Runtime: 0 ms, faster than 100.00% of C++ online submissions for Generate Parentheses.
 ### 23. Merge k Sorted Lists
