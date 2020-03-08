@@ -343,6 +343,9 @@ double Pow(double x, unsigned int n)
 ### 58. Length of Last Word
 简单题，直接秒杀
 
+### 59. Spiral Matrix II
+和54题思路一样
+
 ### 60. Permutation Sequence
 直接背公式
 
