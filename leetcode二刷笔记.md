@@ -350,6 +350,29 @@ double Pow(double x, unsigned int n)
     }
     return goal == 0;
 ```
+### 56. Merge Intervals（好题三刷）
+```
+        sort(intervals.begin(), intervals.end());
+        vector<vector<int>> res;
+        int len = intervals.size();
+        if (len == 0) return res;
+        res.push_back(intervals[0]);
+        int vlen = 1;
+        int tmp;
+        for (int i = 1; i < len; i++)
+        {
+            vlen = res.size();
+            tmp = res[vlen-1][1];
+            if (intervals[i][0] > tmp)
+                res.push_back(intervals[i]);
+            else
+                res[vlen-1][1] = max(tmp, intervals[i][1]);
+        }
+        return res;
+```
+难点：
+1.sort的使用<br>
+2.每次是和res的最后一个元素比较
 
 ### 58. Length of Last Word
 简单题，直接秒杀
