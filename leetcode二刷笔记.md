@@ -411,8 +411,8 @@ unsigned int dp[][] = {};
 ```
 unsigned int dp[][] = {};
 ```
-
-
+### 64. Minimum Path Sum
+二维dp秒解
 
 ### 75. sort colors
 可以直接用数组记录02个数然后自己创造，也可以用左右指针指向02的位置，<br>
