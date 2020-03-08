@@ -398,6 +398,22 @@ double Pow(double x, unsigned int n)
 返回哪一个指针(len-k)
 ```
 
+### 62	Unique Paths    
+二维dp秒解
+注意声明为
+```
+unsigned int dp[][] = {};
+```
+
+### 63	Unique PathsII
+二维dp秒解
+注意声明为
+```
+unsigned int dp[][] = {};
+```
+
+
+
 ### 75. sort colors
 可以直接用数组记录02个数然后自己创造，也可以用左右指针指向02的位置，<br>
 搜到0和左指针互换，左++ i++***i可以加因为左指针指向的不是0就是1***<br>
