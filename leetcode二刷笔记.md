@@ -429,6 +429,21 @@ unsigned long long mid,这样做乘法的话结果是unsigned long long
 ### 70. Climbing Stairs
 简单dp
 
+### 71. Simplify Path
+分割所有的"/"，剩下的用栈随便做
+```
+        stringstream ss(path);
+        vector<string> stk;
+        while (getline(ss, tmp, '/'))
+        {
+            if (tmp == "" || tmp == ".") continue;
+            if (tmp == ".." && !stk.empty()) stk.pop_back();
+            if (tmp != "..") stk.push_back(tmp);
+        }
+        for (auto s: stk) res += "/" + s;
+        return stk.empty() ? "/": res;
+```
+
 ### 75. sort colors
 可以直接用数组记录02个数然后自己创造，也可以用左右指针指向02的位置，<br>
 搜到0和左指针互换，左++ i++***i可以加因为左指针指向的不是0就是1***<br>
