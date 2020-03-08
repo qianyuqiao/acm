@@ -374,6 +374,13 @@ double Pow(double x, unsigned int n)
 1.sort的使用<br>
 2.每次是和res的最后一个元素比较
 
+### 57. Insert Interval
+```
+1.用二分查找找出插入位置
+2.插入
+3.用56题的思路比较
+```
+
 ### 58. Length of Last Word
 简单题，直接秒杀
 
