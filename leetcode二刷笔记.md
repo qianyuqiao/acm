@@ -329,6 +329,17 @@ double Pow(double x, unsigned int n)
 和41题一样
 ### 53.最大连续子序列（易错）
 注意卡丹算法的坑
+
+### 54. Spiral Matrix
+```
+模拟问题，注意特殊情况
+1.只有一行
+2.只有一列
+我看到的leetcode上最好的思路：
+设置rowst, rowed, colst, coled来限定当前区域，
+每次在送数的时候一定要确保rowst <= rowed 且colst <= coled;
+```
+    
 ### 58. Length of Last Word
 简单题，直接秒杀
 
