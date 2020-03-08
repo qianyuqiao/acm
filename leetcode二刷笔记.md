@@ -443,6 +443,20 @@ unsigned long long mid,这样做乘法的话结果是unsigned long long
         for (auto s: stk) res += "/" + s;
         return stk.empty() ? "/": res;
 ```
+### 72. Edit Distance（学姐问过我的题）
+```
+思路：其实只有两种操作：
+1.相同长度，替换
+2.不同长度，短的要增加
+递推公式：
+s1[i] == s2[j]: 
+dp[i][j] = dp[i-1][j-1];
+s1[i] != s2[j]:
+dp[i][j] = min(dp[i-1][j-1]+1, dp[i-1][j]+1, dp[i][j-1]+1);
+难点：
+i = 0的一列的初始化（有相同的，1+i-1，否则1+i)
+j = 0 的一行的初始化（有相同的，1+j-1，否则1+j)
+```
 
 ### 75. sort colors
 可以直接用数组记录02个数然后自己创造，也可以用左右指针指向02的位置，<br>
