@@ -339,7 +339,18 @@ double Pow(double x, unsigned int n)
 设置rowst, rowed, colst, coled来限定当前区域，
 每次在送数的时候一定要确保rowst <= rowed 且colst <= coled;
 ```
-    
+### 55.jump game
+思路：从后向前推，当发现nums[i] + i >= goal的时候，这时候只要能保证能跳到goal位置就行。
+```
+   int goal = len - 1;
+   for (int i = len - 1; i >= 0; i--)
+   {
+        if (nums[i]+i >= goal)
+            goal = i;
+    }
+    return goal == 0;
+```
+
 ### 58. Length of Last Word
 简单题，直接秒杀
 
