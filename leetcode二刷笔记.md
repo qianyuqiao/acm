@@ -334,5 +334,29 @@ double Pow(double x, unsigned int n)
 
 ### 60. Permutation Sequence
 直接背公式
+
+### 75. sort colors
+可以直接用数组记录02个数然后自己创造，也可以用左右指针指向02的位置，<br>
+搜到0和左指针互换，左++ i++***i可以加因为左指针指向的不是0就是1***<br>
+搜到1和右指针，右--,***i不能加，因为可能换了个0或者2过来***
+如下
+```
+        while (i <= r)
+        {
+            if (nums[i] == 0)
+            {
+                swap(nums[l], nums[i]);
+                l++;
+            }
+            else if (nums[i] == 2)
+            {
+                swap(nums[r], nums[i]);
+                r--;
+                i--; // 这个地方是易错点，因为可能直接换了个2或者0过来
+            }
+            i++;
+        }
+```
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
+
