@@ -420,6 +420,12 @@ unsigned int dp[][] = {};
 ### 67. Add Binary
 简单题，秒杀
 
+### 69. Sqrt(x)
+```
+二分查找，简单，注意
+unsigned long long mid,这样做乘法的话结果是unsigned long long
+```
+
 ### 75. sort colors
 可以直接用数组记录02个数然后自己创造，也可以用左右指针指向02的位置，<br>
 搜到0和左指针互换，左++ i++***i可以加因为左指针指向的不是0就是1***<br>
