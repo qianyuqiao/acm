@@ -526,6 +526,8 @@ i = 0,...,2^n-1
 ```
 思路：贪吃蛇，吃完后比较
 ```
+### 80. Remove Duplicates from Sorted Array II
+和26题思路一模一样
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
