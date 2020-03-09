@@ -535,6 +535,12 @@ i = 0,...,2^n-1
 ### 83. Remove Duplicates from Sorted List
 简单题
 
+### 86. Partition List
+注意，这题的tail2会成环！！！
+```
+要把tail2->next = NULL;
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
