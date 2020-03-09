@@ -503,6 +503,11 @@ j = 0 的一行的初始化（有相同的，1+j-1，否则1+j)
             i++;
         }
 ```
+### 76. Minimum Window Substring（三刷，注意res == MAX_INT的时候，res 要变成0）
+```
+如果面试的时候要写，那么每次循环时都手动计算是不是map是不是满了
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
