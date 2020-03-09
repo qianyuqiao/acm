@@ -541,6 +541,9 @@ i = 0,...,2^n-1
 要把tail2->next = NULL;
 ```
 
+### 90. Subsets II（注意这题是乱序）
+好题三刷，注意这题是乱序
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
