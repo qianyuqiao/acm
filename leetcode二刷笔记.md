@@ -540,6 +540,8 @@ i = 0,...,2^n-1
 ```
 要把tail2->next = NULL;
 ```
+### 88. Merge Sorted Array
+秒杀题，二分查找+从后覆盖
 
 ### 90. Subsets II（注意这题是乱序）
 好题三刷，注意这题是乱序
