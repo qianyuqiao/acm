@@ -559,6 +559,27 @@ i = 0,...,2^n-1
 ### 92. Reverse Linked List II
 简单秒杀
 
+### 93. Restore IP Addresses
+WHO CAN BEAT THIS CODE???
+```
+        for (int a = 1; a <= 3; a++)
+        for (int b = 1; b <= 3; b++)
+        for (int c = 1; c <= 3; c++)
+        for (int d = 1; d <= 3; d++)
+            if (a + b + c + d == len)
+            {
+                int A = stoi(s.substr(0, a));
+                int B = stoi(s.substr(a, b));
+                int C = stoi(s.substr(a+b, c));
+                int D = stoi(s.substr(a+b+c, d));
+                if (A <= 255 && B <= 255 && C <= 255 && D <= 255)
+                {
+                    string tmp = to_string(A) + "." + to_string(B) + "." + to_string(C) + "." + to_string(D);
+                    if (tmp.size() == s.size() + 3)res.push_back(tmp);
+                }
+            }
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
