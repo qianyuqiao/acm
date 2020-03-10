@@ -588,6 +588,15 @@ WHO CAN BEAT THIS CODE???
 ```
 用分治法即可。。
 ```
+### 96. Unique Binary Search Trees
+和上题思路一模一样
+```
+   dp[0] = 1;
+   dp[1] = 1;
+        for (int i = 2; i <= n; i++)
+            for (int j = 1; j <= i; j++)
+                dp[i] += dp[j-1]*dp[i-j];
+```
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
