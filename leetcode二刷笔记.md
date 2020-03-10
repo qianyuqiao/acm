@@ -607,6 +607,11 @@ WHO CAN BEAT THIS CODE???
 设dp[i][j]为s1前i位和s2前j位能不能组成s3的前i+j位
 ```
 
+### 98. Validate Binary Search Tree
+```
+中序遍历
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
