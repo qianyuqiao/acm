@@ -540,6 +540,11 @@ i = 0,...,2^n-1
 ```
 要把tail2->next = NULL;
 ```
+### 87. Scramble String（好题三刷）
+```
+分治法
+```
+
 ### 88. Merge Sorted Array
 秒杀题，二分查找+从后覆盖<br>
 或者先把nums1的前面移位到后面，再用双指针插入<br>
