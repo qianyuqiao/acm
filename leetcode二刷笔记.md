@@ -607,9 +607,13 @@ WHO CAN BEAT THIS CODE???
 设dp[i][j]为s1前i位和s2前j位能不能组成s3的前i+j位
 ```
 
-### 98. Validate Binary Search Tree
+### 98. Validate Binary Search Tree（二叉搜索树的判定，中序遍历）
 ```
 中序遍历
+```
+### 100. Same Tree
+```
+用BFS的话0s
 ```
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
