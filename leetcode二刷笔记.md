@@ -611,6 +611,12 @@ WHO CAN BEAT THIS CODE???
 ```
 中序遍历
 ```
+
+### 99. Recover Binary Search Tree
+```
+中序遍历
+```
+
 ### 100. Same Tree
 ```
 用BFS的话0s
