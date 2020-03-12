@@ -689,13 +689,19 @@ return hasPathSum(root->left, sum-root->val) || hasPathSum(root->right, sum-root
 4.根节点的左节点为空
 5.指针移到右节点，返回1
 ```
+方法二：先右子树的中序遍历
 
 ### 115.115. Distinct Subsequences（好题狂刷）
 ```
 dp[i][j] = dp[i-1][j] + (s[i-1] == t[j-1]? dp[i-1][j-1]: 0);
 ```
 
-方法二：先右子树的中序遍历
+### 116. Populating Next Right Pointers in Each Node
+```
+root->left->next = root->right;
+root->right->next = root->next? root->next->left: NULL;
+```
+
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
