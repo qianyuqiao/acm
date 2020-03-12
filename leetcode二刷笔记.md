@@ -627,8 +627,18 @@ WHO CAN BEAT THIS CODE???
 可以用BFS, DFS和递归
 ```
 
-### 102. Binary Tree Level Order Traversal
+### 102. Binary Tree Level Order Traversal(牢记DFS写法)
 简单BFS
+```
+void dfs(vector<vector<int>>& res, int level, TreeNode* root)
+{
+    if (!root) return;
+    if (res.size() <= level) res.push_back({});
+    res[level].push_back(root->val);
+    dfs(res, level+1, root->left);
+    dfs(res, level+1, root->right);
+}
+```
 
 ### 103. Binary Tree Zigzag Level Order Traversal
 BFS方法不变，当遇到偶数行反过来装填就行了
