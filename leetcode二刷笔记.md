@@ -670,6 +670,13 @@ else return 1+max(minDepth(root->left), minDepth(root->right));
 ```
 也可以层序遍历，当一个节点无左右子树的时候返回当前层数
 
+### 112. Path Sum
+key:
+```
+if (!root->left && !root->right) return root->val == sum;
+return hasPathSum(root->left, sum-root->val) || hasPathSum(root->right, sum-root->val);
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
