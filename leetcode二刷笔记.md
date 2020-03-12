@@ -697,11 +697,14 @@ dp[i][j] = dp[i-1][j] + (s[i-1] == t[j-1]? dp[i-1][j-1]: 0);
 ```
 
 ### 116. Populating Next Right Pointers in Each Node
+BFS随便做
 ```
 root->left->next = root->right;
 root->right->next = root->next? root->next->left: NULL;
 ```
 
+### 117. Populating Next Right Pointers in Each Node（建议换一种方法三刷）
+BFS随便坐
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
