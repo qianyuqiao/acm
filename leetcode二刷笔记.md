@@ -713,7 +713,7 @@ BFS随便坐
 简单
 
 ### 120. Triangle
-好题易错
+好题易错，可以用一维dp
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
