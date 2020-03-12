@@ -639,6 +639,9 @@ BFS方法不变，当遇到偶数行反过来装填就行了
 ### 105. Construct Binary Tree from Preorder and Inorder Traversal
 简化的秘诀在于设ist走i步到达pst
 
+### 106. 106. Construct Binary Tree from Inorder and Postorder Traversal
+和上一题一样，简化的秘诀在于设ist走i步到达postorder[pst+size-1]
+
 ### 107. Binary Tree Level Order Traversal II
 res.insert(res.begin(), tmp);
 
@@ -655,6 +658,7 @@ ListNode* fase = head;
 ```
 ### 110. Balanced Binary Tree（好题三刷）
 好题三刷
+
 
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
