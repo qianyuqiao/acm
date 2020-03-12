@@ -706,6 +706,12 @@ root->right->next = root->next? root->next->left: NULL;
 ### 117. Populating Next Right Pointers in Each Node（建议换一种方法三刷）
 BFS随便坐
 
+### 118. Pascal's Triangle 
+简单
+
+### 119. Pascal's Triangle II
+简单
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
