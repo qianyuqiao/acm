@@ -689,6 +689,7 @@ return hasPathSum(root->left, sum-root->val) || hasPathSum(root->right, sum-root
 4.根节点的左节点为空
 5.指针移到右节点，返回1
 ```
+方法二：先右子树的中序遍历
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
