@@ -659,6 +659,8 @@ ListNode* fase = head;
 ### 110. Balanced Binary Tree（好题三刷）
 好题三刷
 
+
+
 ### 111. Minimum Depth of Binary Tree（难题易错）
 当一个子树为空树的时候，选取最大的
 ```
@@ -666,6 +668,7 @@ if (!root) return 0;
 if (root->left && root->right) return 1+min(minDepth(root->left), minDepth(root->right));
 else return 1+max(minDepth(root->left), minDepth(root->right));
 ```
+也可以层序遍历，当一个节点无左右子树的时候返回当前层数
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
