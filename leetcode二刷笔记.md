@@ -737,13 +737,17 @@ BFS随便坐
 ```
 方法一：取截断点（超时）
 方法二：状态机
-int s1=-prices[0],s2=INT_MIN,s3=INT_MIN,s4=INT_MIN;
-for(int i=1; i < prices.size(); ++i) {            
-    s1 = max(s1, -prices[i]); //买入价格更低的股
-    s2 = max(s2, s1+prices[i]); //卖出当前股，或者不操作
-    s3 = max(s3, s2-prices[i]); //第二次买入，或者不操作
-    s4 = max(s4, s3+prices[i]); //第二次卖出，或者不操作
-}
+        int buy1 = INT_MIN;
+        int buy2 = INT_MIN;
+        int sell1 = 0;
+        int sell2 = 0;
+        for(int i = 0; i < prices.size(); i++)
+        {
+            buy1 = max(buy1, -prices[i]);
+            sell1 = max(sell1, buy1 + prices[i]);
+            buy2 = max(buy2, sell1-prices[i]);
+            sell2 = max(sell2, buy2+prices[i]);
+        }
 ```
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
