@@ -750,6 +750,9 @@ BFS随便坐
         }
 ```
 
+### 124. Binary Tree Maximum Path Sum
+难点在于，dfs返回的是单边结果。。
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
