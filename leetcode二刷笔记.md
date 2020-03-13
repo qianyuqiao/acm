@@ -733,7 +733,7 @@ BFS随便坐
 从下面这张图里面可以看出，只要低买高抛就行。
 ![image](https://github.com/qianyuqiao/acm/blob/master/img/stock.jpg)
 
-### 123. Best Time to Buy and Sell Stock III（同一天里可以先买入股票再卖出股票）
+### 123. Best Time to Buy and Sell Stock III（同一天里可以先买入股票再卖出股票，直接背题吧）
 ```
 方法一：取截断点（超时）
 方法二：状态机
