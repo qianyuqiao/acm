@@ -729,6 +729,9 @@ BFS随便坐
 ```
 这题另一种解法是卡丹算法。。
 ```
+### 122. Best Time to Buy and Sell Stock II
+从下面这张图里面可以看出，只要低买高抛就行。
+![image](https://github.com/qianyuqiao/acm/blob/master/img/stock.jpg)
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
