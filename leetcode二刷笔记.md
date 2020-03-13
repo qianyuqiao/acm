@@ -758,6 +758,12 @@ BFS随便坐
 ### 127. Word Ladder（经典题，无限刷）
 BFS
 
+### 128. Longest Consecutive Sequence（从连续数列的最小数数起）
+哈希数组。
+
+### 129. Sum Root to Leaf Numbers
+把根的运算结果作为dfs参数，遇到叶子结点就累加到res上并返回
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
