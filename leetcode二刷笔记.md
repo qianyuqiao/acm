@@ -733,6 +733,19 @@ BFS随便坐
 从下面这张图里面可以看出，只要低买高抛就行。
 ![image](https://github.com/qianyuqiao/acm/blob/master/img/stock.jpg)
 
+### 123. Best Time to Buy and Sell Stock III（同一天里可以先买入股票再卖出股票）
+```
+方法一：取截断点（超时）
+方法二：状态机
+int s1=-prices[0],s2=INT_MIN,s3=INT_MIN,s4=INT_MIN;
+for(int i=1; i < prices.size(); ++i) {            
+    s1 = max(s1, -prices[i]); //买入价格更低的股
+    s2 = max(s2, s1+prices[i]); //卖出当前股，或者不操作
+    s3 = max(s3, s2-prices[i]); //第二次买入，或者不操作
+    s4 = max(s4, s3+prices[i]); //第二次卖出，或者不操作
+}
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
