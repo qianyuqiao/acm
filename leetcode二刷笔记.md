@@ -890,6 +890,20 @@ unordered_map<string, vector<string>>& m
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
 
+### 718. Maximum Length of Repeated Subarray
+```
+if (len1 == 0 || len2 == 0) return 0;
+int dp[len2+1] = {};
+int res = 0;
+for (int i = 1; i <= len1; i++)
+for (int j = len2; j >= 1; j--)
+{
+    if (A[i-1] == B[j-1]) dp[j] = dp[j-1] + 1;
+    else dp[j] = 0;
+    res = max(res, dp[j]);
+ }
+return res;
+```
 
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
