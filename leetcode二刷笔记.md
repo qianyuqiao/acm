@@ -898,7 +898,7 @@ void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pai
     int j = 0;
     while (i < vec1.size() && j < vec2.size())
     {
-        if (vec1[i] <= vec2[j])  // 这里小于 小于等于都可以
+        if (vec1[i].first <= vec2[j].first)  // 这里必须是<=,如果是小于，则计算的是小于等于的个数
         {
             vec0.push_back(vec1[i]);
             cnt[vec1[i].second] += j; // 这里加了一行
