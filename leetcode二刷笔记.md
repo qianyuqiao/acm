@@ -890,6 +890,40 @@ unordered_map<string, vector<string>>& m
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
 
+###
+```
+void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
+{
+    int i = 0;
+    int j = 0;
+    while (i < vec1.size() && j < vec2.size())
+    {
+        if (vec1[i] <= vec2[j])
+        {
+            vec0.push_back(vec1[i]);
+            cnt[vec1[i].second] += j; // 这里加了一行
+            i++;
+        }
+        else
+        {
+            vec0.push_back(vec2[j]);
+            j++;
+        }
+    }
+    while (i < vec1.size())
+    {
+            vec0.push_back(vec1[i]);
+            cnt[vec1[i].second] += j; //这里又加了一行
+            i++;
+    }
+    while (j < vec2.size())
+    {
+            vec0.push_back(vec2[j]);
+            j++;
+    }       
+}
+```
+
 ### 718. Maximum Length of Repeated Subarray（注意区分子序列和子串的区别，本题是子串）
 ```
 if (len1 == 0 || len2 == 0) return 0;
