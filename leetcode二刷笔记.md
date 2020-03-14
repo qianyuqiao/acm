@@ -890,7 +890,7 @@ unordered_map<string, vector<string>>& m
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
 
-### 718. Maximum Length of Repeated Subarray
+### 718. Maximum Length of Repeated Subarray（注意区分子序列和子串的区别，本题是子串）
 ```
 if (len1 == 0 || len2 == 0) return 0;
 int dp[len2+1] = {};
