@@ -830,7 +830,7 @@ for (int i = 0; i < nums.size(); i++)
 return one;
 ```
 
-### 138. Copy List with Random Pointer
+### 138. Copy List with Random Pointer（好题三刷）
 难点在于拆分
 ```
         l1 = head;        
@@ -855,11 +855,37 @@ for (int j = 0; j <= i; j++)
 if (wordDict.find(s.substr(j, i-j+1) != wordDict.end()) dp[i+1] |= dp[j];
 ```
 
-### 140. Word BreakII
+### 140. Word BreakII（好题三刷）
 在每次DFS参数里面加上
 ```
 unordered_map<string, vector<string>>& m
 ```
+
+### 141. Linked List Cycle
+```
+简单的快慢指针
+```
+
+### 141. Linked List CycleII（背诵默写）
+```
+    ListNode* entry = head;
+    while (fast && fast->next)
+    {
+        slow = slow->next;
+        fast = fast->next->next;
+        if (slow == fast)
+        {
+            while (entry != slow)
+            {
+                slow = slow->next;
+                entry = entry->next;
+            }
+            return entry;
+        }
+    }
+    return NULL;
+```
+
 来避免重复调用
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
