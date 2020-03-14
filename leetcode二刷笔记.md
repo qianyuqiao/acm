@@ -776,6 +776,37 @@ BFS
 res[i] = min(dp[j-1]+1, dp[j-2] +1 ...)（如果dp[j][i]为true）
 ```
 
+### 133. Clone Graph（难题，，不会。。）
+BFS：
+```
+        while (q.size())
+        {
+            Node* tmp = q.front();
+            q.pop_front();
+            for (Node* it: tmp->neighbors)
+            {
+                if (m.find(it) == m.end())
+                {
+                    m[it] = new Node(it->val, {});
+                    q.push_back(it);                    
+                }
+                m[tmp]->neighbors.push_back(m[it]);
+            }
+        }
+```
+DFS:
+```
+Node* cloneGraph(Node* node) {
+    if (!node) return node;
+    if (m.find(node) == m.end())
+    {
+        m[node] = new Node(node->val, {});
+        for (Node* it: node->neighbors) m[node]->neighbors.push_back(cloneGraph(it));
+    }
+    return m[node];
+}
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
