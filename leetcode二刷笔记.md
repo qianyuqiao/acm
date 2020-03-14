@@ -830,7 +830,7 @@ for (int i = 0; i < nums.size(); i++)
 return one;
 ```
 
-### 138. Copy List with Random Pointer（好题三刷）
+### 138. Copy List with Random Pointer（好题三刷，这题和133基本是一样的。。。）
 难点在于拆分
 ```
         l1 = head;        
@@ -890,7 +890,7 @@ unordered_map<string, vector<string>>& m
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
 
-###
+### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
 {
