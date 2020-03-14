@@ -860,6 +860,7 @@ if (wordDict.find(s.substr(j, i-j+1) != wordDict.end()) dp[i+1] |= dp[j];
 ```
 unordered_map<string, vector<string>>& m
 ```
+来避免重复调用
 
 ### 141. Linked List Cycle
 ```
@@ -886,7 +887,10 @@ unordered_map<string, vector<string>>& m
     return NULL;
 ```
 
-来避免重复调用
+### 144. Binary Tree Preorder Traversal
+中序遍历的递归实现是最简单的。。。。
+
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
