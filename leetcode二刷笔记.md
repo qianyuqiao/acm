@@ -769,6 +769,13 @@ BFS
 ### 131. Palindrome Partitioning
 直接BFS
 
+### 132. Palindrome Partitioning II
+```
+设dp[i][j] 为起始位置为下标i,截止位置为j的字符串是否为回文
+设res[i]为s[0...i]的结果
+res[i] = min(dp[j-1]+1, dp[j-2] +1 ...)（如果dp[j][i]为true）
+```
+
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
