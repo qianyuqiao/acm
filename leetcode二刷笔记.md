@@ -807,9 +807,60 @@ Node* cloneGraph(Node* node) {
 }
 ```
 
+
 ### 134. Gas Station
 可以用数学归纳法证明，sum >=0则必有解
 
+### 136. Single Number I
+0与任何数异或等于那个数本身
+
+### 137. Single Number II（亦且非小姐）
+方法一：
+```
+把所有的数按照二进制展开，统计每一位1的个数cnt,如果不是3个,那一位就是单个数字有的位。
+```
+方法二：
+```
+int one = 0, two = 0;
+for (int i = 0; i < nums.size(); i++)
+{
+    one = (nums[i]^one)&~two;
+    two = (nums[i]^two)&~one;
+}
+return one;
+```
+
+### 138. Copy List with Random Pointer
+难点在于拆分
+```
+        l1 = head;        
+        Node* l2_head = l1->next;
+        while (l1)
+        {
+            l2 = l1->next;
+            l1->next = l2->next;
+            if (l2->next) l2->next = l2->next->next;
+            l1 = l1->next;
+        }
+        return l2_head;
+```
+
+### 139. Word Break
+```
+int len = s.size();
+bool dp[len+1] = {};
+dp[0] = true;
+for (int i = 0; i < len; i++)
+for (int j = 0; j <= i; j++)
+if (wordDict.find(s.substr(j, i-j+1) != wordDict.end()) dp[i+1] |= dp[j];
+```
+
+### 140. Word BreakII
+在每次DFS参数里面加上
+```
+unordered_map<string, vector<string>>& m
+```
+来避免重复调用
 ### 958. Check Completeness of a Binary Tree(建议三刷)
 如果是完全二叉树，到空节点就停止的层序遍历，空节点后不应该还有非空节点。
 
