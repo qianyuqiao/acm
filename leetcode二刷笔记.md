@@ -929,6 +929,16 @@ while (fast->next && fast->next->next)
 ### 145. Binary Tree Postorder Traversal
 后序遍历记得同一个节点压入两次
 
+### 146. LRU Cache （无限刷）
+难点一:必须用list否则不能push_front();
+```
+list<pair<int, int>> recent;
+```
+难点二： 必须用迭代器来保证删除
+```
+unordered_map<int, list<pair<int, int>>::iterator> pos;
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
