@@ -926,6 +926,9 @@ while (fast->next && fast->next->next)
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
 
+### 145. Binary Tree Postorder Traversal
+后序遍历记得同一个节点压入两次
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
