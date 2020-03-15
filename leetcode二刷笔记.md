@@ -899,8 +899,29 @@ unordered_map<string, vector<string>>& m
     }
     vec[i]->next = NULL;
 ```
-方法二：递归
-
+方法二：递归 （难点在注释处）
+```
+    ListNode* helper(ListNode* head, int len)
+    {
+        if (len == 0) return NULL;
+        if (len == 1) return head;
+        if (len == 2) return head->next;
+        ListNode* tail = helper(head->next, len-2);
+        ListNode* tmp = tail->next;
+        tail->next = tail->next->next; // 难点在这一行
+        tmp->next = head->next;
+        head->next = tmp; 
+        return tail;
+    }
+```
+方法三：拆分，逆转与合并
+用快慢指针找到第一段的最后一个元素
+```
+while (fast->next && fast->next->next)
+```
+逆转第二段<br>
+拆分两段<br>
+合并两段<br>
 
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
