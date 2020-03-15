@@ -886,6 +886,21 @@ unordered_map<string, vector<string>>& m
     }
     return NULL;
 ```
+### 143. Reorder List
+方法一 存储
+```
+    while (i < j)
+    {
+        vec[i]->next = vec[j];
+        i++;
+        if (i == j) break;
+        vec[j]->next = vec[i];
+        j--;
+    }
+    vec[i]->next = NULL;
+```
+方法二：递归
+
 
 ### 144. Binary Tree Preorder Traversal
 中序遍历的递归实现是最简单的。。。。
