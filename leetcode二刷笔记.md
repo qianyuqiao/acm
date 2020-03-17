@@ -964,6 +964,18 @@ head->next = NULL;
 简单题
 ```
 
+### 151. Reverse Words in a String（反复刷）
+好题，难点在于下面第4行
+```
+while (i < len && j < len)
+{
+    while (j < len && s[j] == ' ') j++;
+    while (j < len && s[j] != ' ') s[i++] = s[j++];
+    while (j < len && s[j] == ' ') j++;
+    if (j < len) s[i++] = ' ';
+}
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
