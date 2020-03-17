@@ -948,6 +948,11 @@ else if (recent.size() >= len)
 }
 ```
 
+### 147. Insertion Sort List（链表的插入排序，易错题，无限刷）
+```
+head->next = NULL;
+```
+
 ### 148. Sort List（易错，在于空节点和单节点的情况）
 ```
     ListNode* sortList(ListNode* head) {
