@@ -938,6 +938,16 @@ list<pair<int, int>> recent;
 ```
 unordered_map<int, list<pair<int, int>>::iterator> pos;
 ```
+难点三：对于put，先判断是旧的还是新的，如果是旧的直接弹出，如果是新的，弹出最后一格。
+```
+if (pos.find(key) != pos.end()) recent.erase(pos[key]);
+else if (recent.size() >= len)
+{
+    pos.erase(recent.back().first);
+    recent.pop_back();
+}
+```
+
 ### 148. Sort List（易错，在于空节点和单节点的情况）
 ```
     ListNode* sortList(ListNode* head) {
