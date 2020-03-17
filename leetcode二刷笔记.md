@@ -959,6 +959,11 @@ head->next = NULL;
         if (!head || !head->next) return head; // 必须这么写，否则会无限次递归
 ```
 
+### 150. Evaluate Reverse Polish Notation
+```
+简单题
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
