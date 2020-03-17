@@ -938,6 +938,11 @@ list<pair<int, int>> recent;
 ```
 unordered_map<int, list<pair<int, int>>::iterator> pos;
 ```
+### 148. Sort List（易错，在于空节点和单节点的情况）
+```
+    ListNode* sortList(ListNode* head) {
+        if (!head || !head->next) return head; // 必须这么写，否则会无限次递归
+```
 
 ### 315 
 ```
