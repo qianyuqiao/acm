@@ -976,6 +976,21 @@ while (i < len && j < len)
 }
 ```
 
+### 152. Maximum Product Subarray（好题三刷）
+```
+            t1 = dpmax* nums[i];
+            t2 = dpmin* nums[i];
+            dpmax = max(max(t1, t2), nums[i]);
+            dpmin = min(min(t1, t2), nums[i]);
+            res = max(res, dpmax);
+```
+
+### 153. Find Minimum in Rotated Sorted Array
+### 你知道这题st和ed为什么不能用等于号吗
+```
+因为必定有结果
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
