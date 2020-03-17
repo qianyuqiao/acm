@@ -996,6 +996,30 @@ while (i < len && j < len)
 只做一件事：ed--
 ```
 
+### 155. Min Stack
+解法一：双栈
+```
+用一个S1存储最小值，S1的栈顶就是最小值
+```
+解法二：更新最小值的时候，先把之前的最小值压栈
+
+### 160. Intersection of Two Linked Lists
+```
+先计算长度，长的先走，最后一起走
+```
+
+### 162. Find Peak Element
+```
+山峰公式：
+if (nums[mid] >= nums[mid+1]) ed = mid;
+elst st = mid + 1;
+```
+
+### 168. Excel Sheet Column Title（这题竟然不会做？？？）
+```
+好题三刷
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
