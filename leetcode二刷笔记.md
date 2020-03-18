@@ -1052,6 +1052,16 @@ sort(nums.begin(), nums.end(), [](int& a, int& b){return to_string(a) + to_strin
 简单题
 ```
 
+### 188. Best Time to Buy and Sell Stock IV(好题狂刷)
+```
+这题是非常好的题，key如下
+    for (int j = 1; j <= n; j++)
+    {
+        buy[j] = max(buy[j], sell[j-1]-nums[i]);
+        sell[j] = max(sell[j], buy[j] + nums[i]);
+    }
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
