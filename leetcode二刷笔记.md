@@ -1037,6 +1037,16 @@ elst st = mid + 1;
 含有 2 的因子每两个出现一次，含有 5 的因子每 5 个出现一次，所有 2 出现的个数远远多于 5，换言之找到一个 5，一定能找到一个 2 与之配对。所以我们只需要找有多少个 5。
 ```
 
+### 173. Binary Search Tree Iterator
+```
+把next()方法变成一次性的迭代中序遍历（每次取出一个数就break）
+```
+
+### 179. Largest Number（好题无限刷）
+```
+sort(nums.begin(), nums.end(), [](int& a, int& b){return to_string(a) + to_string(b) > to_string(b) + to_string(a);});
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
