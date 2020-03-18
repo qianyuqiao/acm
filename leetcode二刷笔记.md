@@ -1067,6 +1067,24 @@ sort(nums.begin(), nums.end(), [](int& a, int& b){return to_string(a) + to_strin
 方法二：开辟数组，略<br>
 方法三：三个reverse();
 
+### 190	Reverse Bits
+简单
+
+### 191. Number of 1 Bits
+把最右边的1置为0
+```
+n &= n-1 
+```
+
+### 198. House Robber
+最大值只可能有两种情况：
+```
+1.可能含有前一个
+dp[i-1];
+2.一定不含前一个
+dp[i-2] + nums[i];
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
