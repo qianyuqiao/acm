@@ -1089,6 +1089,11 @@ n &= n-1
 先根后右子树再左子树
 ```
 
+### 200. Number of Islands
+```
+感染问题，简单 遇到1的时候++并感染
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
