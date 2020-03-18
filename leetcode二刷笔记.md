@@ -1027,6 +1027,11 @@ elst st = mid + 1;
 好题三刷
 ```
 
+### 171. Excel Sheet Column Number
+```
+注意base的溢出
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
