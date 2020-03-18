@@ -1032,6 +1032,11 @@ elst st = mid + 1;
 注意base的溢出
 ```
 
+### 172. Factorial Trailing Zeroes（看看我的解释）
+```
+含有 2 的因子每两个出现一次，含有 5 的因子每 5 个出现一次，所有 2 出现的个数远远多于 5，换言之找到一个 5，一定能找到一个 2 与之配对。所以我们只需要找有多少个 5。
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
