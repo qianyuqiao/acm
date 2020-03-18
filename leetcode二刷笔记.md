@@ -1047,6 +1047,11 @@ elst st = mid + 1;
 sort(nums.begin(), nums.end(), [](int& a, int& b){return to_string(a) + to_string(b) > to_string(b) + to_string(a);});
 ```
 
+### 187. Repeated DNA Sequences
+```
+简单题
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
