@@ -1062,6 +1062,11 @@ sort(nums.begin(), nums.end(), [](int& a, int& b){return to_string(a) + to_strin
     }
 ```
 
+### 189. Rotate Array
+方法一：正常覆盖,略<br>
+方法二：开辟数组，略<br>
+方法三：三个reverse();
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
