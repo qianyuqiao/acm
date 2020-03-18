@@ -1017,6 +1017,11 @@ elst st = mid + 1;
 
 ### 164. Maximum Gap（我只会基数排序啊不会堆排序啊）
 
+### 165. Compare Version Numbers（这题要用while (i < len1 || j < len2)）
+```
+好题狂刷
+```
+
 ### 168. Excel Sheet Column Title（这道题就是AZ, AlieZ，这题竟然不会做？？？）
 ```
 好题三刷
