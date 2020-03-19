@@ -1112,6 +1112,11 @@ n &= n-1
 ### 210. Course Schedule II（拓扑排序）
 先看有没有
 
+### 213. House Robber II（做两次dp）
+```
+ dp1[i] = max(dp1[i-1], nums[i-1]+dp1[i-2]);
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
