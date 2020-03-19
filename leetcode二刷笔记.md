@@ -1094,6 +1094,13 @@ n &= n-1
 感染问题，简单 遇到1的时候++并感染
 ```
 
+### 202. Happy Number（快慢指针）
+
+### 205. Isomorphic Strings
+```
+这题需要把数字映射到位置上
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
