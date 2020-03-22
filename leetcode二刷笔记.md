@@ -506,6 +506,14 @@ j = 0 的一行的初始化（有相同的，1+j-1，否则1+j)
 ### 76. Minimum Window Substring（三刷，注意res == MAX_INT的时候，res 要变成0）
 ```
 如果面试的时候要写，那么每次循环时都手动计算是不是map是不是满了
+bool isvalid(unordered_map<char, int>& m)
+{
+    for (auto item: m)
+    {
+        if (item.second > 0) return false;            
+    }
+    return true;
+}
 ```
 
 ### 77. Combinations（三刷时建议用迭代）
