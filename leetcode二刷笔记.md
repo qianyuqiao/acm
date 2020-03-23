@@ -1162,6 +1162,16 @@ dp[i][j] = 1 + min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]);
 否则 左子树 + 1 + 右子树
 ```
 
+### 223. Rectangle Area
+```
+注意数据可能会溢出
+```
+
+### 225. Implement Stack using Queues
+```
+添加新元素时，新元素前面的元素依次出队再入队
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
