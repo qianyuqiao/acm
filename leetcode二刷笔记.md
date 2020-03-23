@@ -1125,15 +1125,29 @@ n &= n-1
  dp1[i] = max(dp1[i-1], nums[i-1]+dp1[i-2]);
 ```
 
-### 215. Kth Largest Element in an Array
+### 215. Kth Largest Element in an Array(好题无限刷！！！！)
 解法一：维护k大小的小顶堆，后面的比堆顶大的话就把堆顶变成后面的数
 ```
 nlog(k)
 ```
-解法二：部分排序
+解法二：部分排序（快排一定要记好）
 ```
 平均复杂度：
 O(n)
+```
+
+### 216. Combination Sum III（好题三刷!!!难点在于只能取1到9）
+
+### 217. Contains Duplicate
+```
+解法一：暴力
+解法二：排序
+解法三：map
+```
+
+### 219. Contains DuplicateII
+```
+维护一个大小为k+1的set
 ```
 
 ### 315 
