@@ -1125,6 +1125,17 @@ n &= n-1
  dp1[i] = max(dp1[i-1], nums[i-1]+dp1[i-2]);
 ```
 
+### 215. Kth Largest Element in an Array
+解法一：维护k大小的小顶堆，后面的比堆顶大的话就把堆顶变成后面的数
+```
+nlog(k)
+```
+解法二：部分排序
+```
+平均复杂度：
+O(n)
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
