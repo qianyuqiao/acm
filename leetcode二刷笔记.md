@@ -1150,6 +1150,18 @@ O(n)
 维护一个大小为k+1的set
 ```
 
+### 221. Maximal Square
+```
+if (matrix[i][j] == '1')
+dp[i][j] = 1 + min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]);
+```
+
+### 222. Count Complete Tree Nodes
+```
+满二叉树： 直接2^h - 1;
+否则 左子树 + 1 + 右子树
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
