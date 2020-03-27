@@ -1186,6 +1186,7 @@ void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pai
             cnt[vec1[i].second] += j; // 这里加了一行
             i++;
         }
+        
         else
         {
             vec0.push_back(vec2[j]);
