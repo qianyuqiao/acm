@@ -1172,6 +1172,14 @@ dp[i][j] = 1 + min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]);
 添加新元素时，新元素前面的元素依次出队再入队
 ```
 
+### 274. H-Index（好题狂刷）
+```
+可以按照如下方法确定某人的H指数：
+
+将其发表的所有SCI论文按被引次数从高到低排序；
+从前往后查找排序后的列表，直到某篇论文的序号大于该论文被引次数。所得序号减一即为H指数。
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
