@@ -1180,6 +1180,11 @@ dp[i][j] = 1 + min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]);
 从前往后查找排序后的列表，直到某篇论文的序号大于该论文被引次数。所得序号减一即为H指数。
 ```
 
+### 297. Serialize and Deserialize Binary Tree（不会啊啊啊啊）
+```
+不会啊啊啊
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
