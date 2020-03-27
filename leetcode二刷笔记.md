@@ -1185,6 +1185,26 @@ dp[i][j] = 1 + min(dp[i-1][j-1], dp[i][j-1], dp[i-1][j]);
 不会啊啊啊
 ```
 
+### 300.最长递增子序列（难点：空序列，只有一个元素的序列）
+``` 
+    int lengthOfLIS(vector<int>& nums) {
+        int len = nums.size();
+        if (len == 0) return 0;
+        vector<int> dp(len, 1);
+        dp[0] = 1;
+        int res = 1;
+        for (int i = 1; i < len; i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                if (nums[j] < nums[i]) dp[i] = max(dp[i], 1+dp[j]);
+            }
+            res = max(res, dp[i]);
+        }
+        return res;
+    }
+```
+
 ### 315 
 ```
 void merge(vector<pair<int, int>>& vec1, vector<pair<int, int>>&vec2, vector<pair<int, int>>& vec0, vector<int>& cnt)
