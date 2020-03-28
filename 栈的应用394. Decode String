@@ -1,0 +1,54 @@
+总结如下：
+```
+1.数字入栈
+2.遇到[,把当前字符串res入栈
+3.遇到], 计算当前字符串
+4.遇到字母，直接在res后追加
+```
+代码如下
+```
+class Solution {
+public:
+    string decodeString(string s) {
+        if (s.size() == 0) return "";
+        stack<int> si;
+        stack<string> sc;
+        char c;
+        string tmp = "";
+        string res = "";
+        for (int i = 0; i < s.size(); i++)
+        {
+            c = s[i];
+            if (isdigit(s[i]))
+            {
+                while (isdigit(s[i]))
+                {
+                    tmp += s[i];
+                    i++;
+                }
+                si.push(stoi(tmp));
+                i--;
+                tmp = "";
+                continue;
+            }
+
+            if (c == '[')
+            {
+                sc.push(res);
+                res = "";
+            }
+            else if (c == ']')
+            {
+                int num = si.top();
+                si.pop();
+                string restmp = sc.top();
+                sc.pop();
+                for (int i = 0; i < num; i++) restmp += res;
+                res = restmp;
+            }
+            else res += c;
+        }
+        return res;
+    }
+};
+```
