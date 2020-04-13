@@ -781,7 +781,7 @@ BFS
 ```
 设dp[i][j] 为起始位置为下标i,截止位置为j的字符串是否为回文
 设res[i]为s[0...i]的结果
-res[i] = min(dp[j-1]+1, dp[j-2] +1 ...)（如果dp[j][i]为true）
+res[i] = min(res[j-1]+1, res[j-2] +1 ...)（如果dp[j][i]为true）
 ```
 
 ### 133. Clone Graph（难题，，不会。。）
