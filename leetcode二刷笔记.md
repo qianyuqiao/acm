@@ -617,6 +617,7 @@ WHO CAN BEAT THIS CODE???
 
 ### 98. Validate Binary Search Tree（二叉搜索树的判定，中序遍历）
 ```
+二叉搜索树可以是空树
 中序遍历
 ```
 
