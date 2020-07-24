@@ -9,6 +9,7 @@
 ![这里随便写文字](https://github.com/qianyuqiao/scripts/blob/master/median.jpg)
 2.二分查找法查找中位数
 ![图片](https://github.com/qianyuqiao/acm/blob/master/img/mid.png)
+```
 将 i 的左边和 j 的左边组合成「左半部分」，将 i 的右边和 j 的右边组合成「右半部分」。
 当 A 数组和 B 数组的总长度是偶数时，如果我们能够保证
 左半部分的长度等于右半部分
@@ -24,6 +25,7 @@ i + j = m - i  + n - j  + 1也就是 j = ( m + n + 1) / 2 - i
 那么，中位数就是
 左半部分最大值，也就是左半部比右半部分多出的那一个数。
 max (A[i-1], B [j-1]）
+```
 设长为m较短数列A的左边有i个数，那么为了兼顾奇偶，长为n较长数列B的左边有j = (m+n+1)/2-i个数<br>
 我们找到的结果必定满足以下之一:<br>
 i = 0 && B[j-1] <= A[i]<br>
