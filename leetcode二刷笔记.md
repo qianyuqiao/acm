@@ -8,6 +8,38 @@
 要找第k个数(k从1开始数)，如果A[i] > B[j]且i+1+j+1 = k那么边界一定在索引j的后面，通过不断试探来确定边界
 ![这里随便写文字](https://github.com/qianyuqiao/scripts/blob/master/median.jpg)
 2.二分查找法查找中位数
+![](https://github.com/qianyuqiao/acm/blob/master/img/mid.png)
+将 i 的左边和 j 的左边组合成「左半部分」，将 i 的右边和 j 的右边组合成「右半部分」。
+
+当 A 数组和 B 数组的总长度是偶数时，如果我们能够保证
+
+*左半部分的长度等于右半部分
+
+i + j = m - i  + n - j  , 也就是 j = ( m + n ) / 2 - i
+*左半部分最大的值小于等于右半部分最小的值 max ( A [ i - 1 ] , B [ j - 1 ]）） <= min ( A [ i ] , B [ j ]））
+
+那么，中位数就可以表示如下
+
+（左半部分最大值 + 右半部分最小值 ）/ 2。
+
+（max ( A [ i - 1 ] , B [  j  - 1 ]）+ min ( A [ i ] , B [ j ]）） /  2
+当 A 数组和 B 数组的总长度是奇数时，如果我们能够保证
+
+*左半部分的长度比右半部分大 1
+
+  i + j = m - i  + n - j  + 1也就是 j = ( m + n + 1) / 2 - i
+*左半部分最大的值小于等于右半部分最小的值 max ( A [ i - 1 ] , B [ j - 1 ]）） <= min ( A [ i ] , B [ j ]））
+
+那么，中位数就是
+
+左半部分最大值，也就是左半部比右半部分多出的那一个数。
+
+max ( A [ i - 1 ] , B [  j - 1 ]）
+
+作者：windliang
+链接：https://leetcode-cn.com/problems/median-of-two-sorted-arrays/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-2/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 设长为m较短数列A的左边有i个数，那么为了兼顾奇偶，长为n较长数列B的左边有j = (m+n+1)/2-i个数<br>
 我们找到的结果必定满足以下之一:<br>
 i = 0 && B[j-1] <= A[i]<br>
