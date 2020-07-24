@@ -28,11 +28,13 @@ max (A[i-1], B [j-1]）
 ```
 设长为m较短数列A的左边有i个数，那么为了兼顾奇偶，长为n较长数列B的左边有j = (m+n+1)/2-i个数<br>
 我们找到的结果必定满足以下之一:<br>
-i = 0 && B[j-1] <= A[i]<br>
-i = m && A[i-1] <= B[j]<br>
-j = 0 && A[i-1] <= B[j]<br>
-j = n && B[j-1] <= A[i]<br>
+```
+i = 0 && B[j-1] <= A[i]
+i = m && A[i-1] <= B[j]
+j = 0 && A[i-1] <= B[j]
+j = n && B[j-1] <= A[i]
 A[i-1] <= B[j] && B[j-1] <= A[i]<br>
+```
 ### 5. Longest Palindromic Substring
 用dp做的话，简单;<br>
 用镜面扩展的话，也简单
