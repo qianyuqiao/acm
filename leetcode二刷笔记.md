@@ -1124,6 +1124,18 @@ n &= n-1
 
 ### 202. Happy Number（快慢指针）
 
+### 204.countPrimes
+https://leetcode-cn.com/problems/count-primes/solution/ru-he-gao-xiao-pan-ding-shai-xuan-su-shu-by-labula/
+```
+for (int i = 2; i < n; i++)
+{   
+    if (isprime[i]) // 优化
+    {
+       for (int j = 2; i*j < n; j++) isprime[i*j] = false;
+    }
+}
+```
+
 ### 205. Isomorphic Strings
 ```
 这题需要把数字映射到位置上
