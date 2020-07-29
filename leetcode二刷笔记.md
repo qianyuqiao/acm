@@ -466,6 +466,7 @@ unsigned long long mid,这样做乘法的话结果是unsigned long long
 ### 72. Edit Distance（学姐问过我的题）
 ```
 思路：其实只有两种操作：
+记得带上0
 1.相同长度，替换
 2.不同长度，短的要增加
 递推公式：
