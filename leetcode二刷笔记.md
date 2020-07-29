@@ -6,7 +6,7 @@
 ### 4. Median of Two Sorted Arrays
 两种思路，1.摁葫芦法，<br>
 要找第k个数(k从1开始数)，如果A[i] > B[j]且i+1+j+1 = k那么边界一定在索引j的后面，通过不断试探来确定边界
-![这里随便写文字](https://github.com/qianyuqiao/scripts/blob/master/median.jpg)
+
 2.二分查找法查找中位数
 ![图片](https://github.com/qianyuqiao/acm/blob/master/img/mid.png)
 ```
