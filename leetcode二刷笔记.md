@@ -317,38 +317,26 @@ res[index1] = sum%10 + '0'; // index1上的数据已经算出来了
 和3SUM,4SUM,conbinationsII一样，在第一个数字完成dfs后后移
 ### 48. Rotate Image
 两个难点，但是画张图就行了
-![image](https://github.com/qianyuqiao/acm/blob/master/img/yuandixuanzhuan.jpg)
+1. i < n/2
+2. j < (n+1)2
+matrix[i][j] = matrix[j][n-1-i];
+    
 <br>
 1.j最大是len-1-i
 2.看图说四个点的坐标
 ### 49 Group Anagrams
 查找排序后的字符串有没有记录
-### 50. Pow(x, n)(不会)
-好题三刷
-1.对INT_MIN要单独处理
-```
-unsigned int nn;
-if (n == INT_MIN) nn = (unsigned int)INT_MAX + 1;
-else nn = (n >= 0 ? n : -n);
-```
-2.公式要背牢
-```
-double Pow(double x, unsigned int n)
-{
-    if (n == 0) return 1.0;
-    if (n == 1) return x;
-    double r = Pow(x, n>>1);
-    r *= r;
-    if (n & 0x01) r *= x;
-    return r;
-}
-```
+
+### 50. Pow(x, n)
+主函数 先判0后判负
+辅助函数 先判0后判1
+
 ### 51. N-Queens(不会）
 难点在于判断条件
 ### 52. N-QueensII
 和41题一样
 ### 53.最大连续子序列（易错）
-注意卡丹算法的坑
+不用多余的sum
 
 ### 54. Spiral Matrix
 ```
