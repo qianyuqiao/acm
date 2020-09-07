@@ -826,6 +826,9 @@ Node* cloneGraph(Node* node) {
 ### 134. Gas Station
 可以用数学归纳法证明，sum >=0则必有解
 
+### 135.Candy（尚未证明）
+维护两个数组，left和right,每个数字都是1，从左向右扫描，从右向左扫描，然后取最大的
+
 ### 136. Single Number I
 0与任何数异或等于那个数本身
 
